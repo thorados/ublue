@@ -65,4 +65,16 @@ systemctl enable podman.socket
 
 echo "::endgroup::"
 
+echo "::group:: Run Cosmic Desktop install"
+
+source /ctx/build/20-cosmic-desktop.sh
+
+echo "::endgroup::"
+
+echo "::group:: Run Hyprland install"
+
+source /ctx/build/30-hyprland.sh
+
+echo "::endgroup::"
+
 echo "Custom build complete!"
